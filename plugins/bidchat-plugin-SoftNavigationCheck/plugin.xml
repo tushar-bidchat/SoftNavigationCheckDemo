@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="bidchat-plugin-SoftNavigationCheck" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SoftNavigationCheck</name>
+    <js-module name="SoftNavigationCheck" src="www/SoftNavigationCheck.js">
+        <clobbers target="cordova.plugins.SoftNavigationCheck" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="SoftNavigationCheck">
+                <param name="android-package" value="com.bidchat.SoftNavigationCheck.SoftNavigationCheck" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/SoftNavigationCheck.java" target-dir="src/com/bidchat/SoftNavigationCheck"
+        />
+    </platform>
+</plugin>
